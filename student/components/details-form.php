@@ -165,6 +165,7 @@
                   class="shadow-sm bg-gray-50 border border-gray-300 text-gray-700 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3"
                   name="email"
                   placeholder="<?php echo $_SESSION['email'];?>"
+                  value="<?php echo $_SESSION['email'];?>"
                />
             </div>
 
@@ -346,7 +347,7 @@
                >Google Drive Link
             </label>
             <input
-               type="tel"
+               type="text"
                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-700 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3"
                placeholder="Paste the link here"
                name="drive"

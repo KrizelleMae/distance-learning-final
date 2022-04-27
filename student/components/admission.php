@@ -14,10 +14,16 @@
         Your application has been <b>approved</b>.<br />
       </div>
 
-      <div class="text-xs mt-9 text-gray-600">
+      <div class="mt-10 text-sm p-5 bg-green-100 mx-10 text-gray-600">
+        You may email the Distance Learning Education at <i></i><a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRzDffhcxpcJhBHSnCkXXzvKJLdcjKbWnkhpVrvjjGRBsnhZDLDvtHJGDgbGRfPjhnhgpxfk" class="text-gray-600 font-bold hover:underline">dlearning.wmsu@gmail.com</a> or <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJfrtXHQjCSmzzGrvDwfRPRFBmNmNzjTrGJQCjwZwgjgqBcLPMnDqnZzvgWvTjtFFmSbZlV" class="text-gray-600 font-bold hover:underline">wmsu@wmsu.edu.ph</a>
+
+        <div class="text-xs mt-5 text-gray-900">
         For more information, visit our
-        <a href="http://wmsu-distance-learning.online/index.php" class="text-sky-800 font-bold">page</a>.
+        <a href="http://wmsu-distance-learning.online/admission.php" class="text-blue-800 font-bold">page</a>.
       </div>
+      </div>
+
+      
     </div>
   </div>
 </div>

@@ -122,7 +122,7 @@ $user_id = $_SESSION['id'];
               <span class="font-bold">Address:</span>
               <!-- <div class="w-14"></div> -->
               <span class=""
-                ><?php echo $row['barangay'] . ", ". $row['city'] .", ". $row['country'];?></span
+                ><?php echo $row['house'] . ", ". $row['street'] .",". $row['city'] .", ". $row['state'].", ". $row['country'] ." ". $row['zip'];?></span
               >
             </div>
 

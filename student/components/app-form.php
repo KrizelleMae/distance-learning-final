@@ -1,6 +1,6 @@
 <?php include './components/sidebar.php'; ?>
 
-<div class="main ">
+<div class="main">
    <div class="">
       <div class="w-11/12 lg:w-2/4 mx-auto py-10">
          <div class="bg-gray-200 h-1 flex items-center justify-between">
@@ -61,13 +61,15 @@
          </div>
       </div>
 
-      <div class="w-full mt-16 shadow p-16 bg-gray-50 rounded">
-         <div
-            class="uppercase mb-16 text-2xl font-semibold text-gray-700 text-center"
-         >
-            Application Form
-         </div>
+      <div
+         class="w-auto mt-16 shadow p-16 mx-20 bg-gray-50 rounded flex justify-center"
+      >
          <div class="">
+            <div
+               class="uppercase mb-16 text-2xl font-semibold text-gray-700 text-center"
+            >
+               Application Form
+            </div>
             <form action="../server/insert_answers.php" method="POST">
                <ol style="list-style-type: number">
                   <li class="mb-10">
@@ -77,7 +79,7 @@
                      <textarea
                         name="answer1"
                         id="text-area"
-                        cols="70"
+                        cols="80"
                         rows="3"
                         class="rounded border border-gray-200 p-4 bg-gray-200"
                         placeholder="Answer here"
@@ -92,7 +94,7 @@
                      <textarea
                         name="answer2"
                         id="text-area"
-                        cols="70"
+                        cols="80"
                         rows="3"
                         class="rounded border border-gray-200 p-4 bg-gray-200"
                         placeholder="Answer here"
@@ -108,7 +110,7 @@
                      <textarea
                         name="answer3"
                         id="text-area"
-                        cols="70"
+                        cols="80"
                         rows="3"
                         class="rounded border border-gray-200 p-4 bg-gray-200"
                         placeholder="Answer here"
@@ -124,7 +126,7 @@
                      <textarea
                         name="answer4"
                         id="text-area"
-                        cols="70"
+                        cols="80"
                         rows="3"
                         class="rounded border border-gray-200 p-4 bg-gray-200"
                         placeholder="Answer here"
@@ -139,7 +141,7 @@
                      <textarea
                         name="answer5"
                         id="text-area"
-                        cols="70"
+                        cols="80"
                         rows="3"
                         class="rounded border border-gray-200 p-4 bg-gray-200"
                         placeholder="Answer here"

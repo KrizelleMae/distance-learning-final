@@ -20,8 +20,26 @@ include '../includes/db_connection.php';
     $degree = $_POST['degree'];
     $drive = $_POST['drive'];
 
+
+
     $sql = mysqli_query($con, 
-    "update user_details set birthdate = '$birthdate', gender = '$gender', civil_stat = '$civil', email = '$email', mobile = '$mobile', tel = '$tel', house = '$house', street = '$street', city = '$city', state = '$state', country = '$country', zip = '$zip', university = '$university', degree = '$degree', drive = '$drive' where user_id = $user_id;");
+    "update user_details set 
+    birthdate = '$birthdate', 
+    gender = '$gender', 
+    civil_stat = '$civil', 
+    email = '$email', 
+    mobile = '$mobile', 
+    tel = '$tel', 
+    house = '$house', 
+    street = '$street', 
+    city = '$city', 
+    state = '$state', 
+    country = '$country', 
+    zip = '$zip', 
+    university = '$university', 
+    degree = '$degree', 
+    drive = '$drive' 
+    where user_id = $user_id;");
 
 
     if($sql){

@@ -57,7 +57,7 @@
 
 <div class="flex items-center justify-center pt-10">
    <div
-      class="shadow text-center shadow shadow-gray-300 w-1/2.5 rounded-lg p-10"
+      class="shadow text-center shadow shadow-gray-300 w-1/2.5 rounded-lg p-16"
    >
       <img src="../images/program.png" alt="" class="mx-auto logo" />
       <br />
@@ -69,11 +69,11 @@
          Kindly choose the program you want to apply for <br />
       </div>
 
-      <form action="../server/select-program.php" method="post" class="mt-7">
+      <form action="../server/select-program.php" method="post" class="mt-10">
          <select
             name="program"
             id="ddl"
-            class="bg-gray-50 border border-gray-300 text-gray-700 text-sm rounded-lg focus:ring-blue-500 w-full focus:border-blue-500 p-2.5 mb-5"
+            class="bg-gray-50 border border-gray-300 text-gray-700 text-sm rounded-lg focus:ring-blue-500 w-80 focus:border-blue-500 p-2.5 mb-3"
             onchange="configureDropDownLists(this,document.getElementById('ddl2'))"
             required
          >
@@ -83,8 +83,9 @@
             <option value="Education">Master of Arts in Education</option>
          </select>
 
+         <br>
          <select
-            class="bg-gray-50 border border-gray-300 text-gray-700 text-sm rounded-lg focus:ring-blue-500 w-full focus:border-blue-500 p-2.5"
+            class="bg-gray-50 border border-gray-300 text-gray-700 text-sm rounded-lg focus:ring-blue-500 w-80 focus:border-blue-500 p-2.5"
             name="major"
             id="ddl2"
             required
@@ -149,6 +150,8 @@
                ddl.options.add(opt);
             }
          </script>
+
+         <br>
 
          <input
             type="submit"

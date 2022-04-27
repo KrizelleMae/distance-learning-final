@@ -55,7 +55,6 @@
                         name="password"
                         placeholder="Password"
                         required
-                       
                         class="bg-gray-50 border border-gray-200 text-gray-500 rounded-lg block w-full py-2.5 px-4"
                      />
                   </div>
