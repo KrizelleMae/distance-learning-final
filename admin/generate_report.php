@@ -38,21 +38,30 @@ if($program == "All"){
 </head>
 <body class="container mx-auto mt-10">
 
-          <a
+
+
+          <div class="flex">
+            <a
+            
+              href="./reports.php"
+              class="mt-6 mb-10 bg-sky-600 text-white px-8 py-2 rounded hover:bg-sky-700 hover:cursor-pointer"
+            >
+              <i class="mr-3 fa fa-chevron-left"></i>Back 
+            </a>
+
+
+           <form action="../server/pdf.php" method="POST" >
+              <input type="hidden" name="program" value="<?php echo $program; ?>">
+               <button
+                    type="submit"
+                    class="ml-3 mt-6 mb-10 bg-green-600 text-white px-8 py-2 rounded hover:bg-green-700 hover:cursor-pointer"
+                  >
+                  Print <i class="ml-1 fa fa-file"></i>
+                </button>
+           </form>
+          </div>
           
-            href="./reports.php"
-            class="mt-6 mb-10 bg-sky-600 text-white px-8 py-2 rounded hover:bg-sky-700 hover:cursor-pointer"
-          >
-           <i class="mr-3 fa fa-chevron-left"></i>Back 
-          </a>
-          
-           <button
-           onclick="window.print();"
-            type="submit"
-            class="ml-3 mt-6 mb-10 bg-green-600 text-white px-8 py-2 rounded hover:bg-green-700 hover:cursor-pointer"
-          >
-            Print <i class="ml-1 fa fa-file"></i>
-          </button>
+           
      <table class="table-auto min-w-full  border divide-y divide-gray-200">
             <thead class="bg-blue py-0">
              
