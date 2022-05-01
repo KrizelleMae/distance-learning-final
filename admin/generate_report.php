@@ -52,12 +52,13 @@ if($program == "All"){
 
            <form action="../server/pdf.php" method="POST" >
               <input type="hidden" name="program" value="<?php echo $program; ?>">
-               <button
+               <input
                     type="submit"
                     class="ml-3 mt-6 mb-10 bg-green-600 text-white px-8 py-2 rounded hover:bg-green-700 hover:cursor-pointer"
+                    value=" PDF"
                   >
-                  Print <i class="ml-1 fa fa-file"></i>
-                </button>
+                 
+         
            </form>
           </div>
           

@@ -14,17 +14,17 @@ class PDF extends FPDF
         $program = $_POST['program'];       
         
         // GFG logo image
-        $this->Image('../images/dl-logo.png', 80, 8, 20);
+        $this->Image('../images/dl-logo.png', 70, 8, 20);
           
         // GFG logo image
-        $this->Image('../images/dl-logo.png', 210, 8, 20);
+        $this->Image('../images/dl-logo.png', 200, 8, 20);
           
            
         // Set font-family and font-size
         $this->SetFont('Arial','B', 11);
 
         // Move to the right
-        $this->Cell(130);
+        $this->Cell(120);
           
           
         // Move to the right
@@ -36,7 +36,7 @@ class PDF extends FPDF
 
         
         // Move to the right
-        $this->Cell(130);
+        $this->Cell(120);
           
             
         // Set font-family and font-size
@@ -49,7 +49,7 @@ class PDF extends FPDF
         $this->Ln(6);
          
         // Move to the right
-        $this->Cell(130);
+        $this->Cell(120);
 
 
         // Set font-family and font-size
@@ -124,7 +124,8 @@ class PDF extends FPDF
             $this->Cell(67, 10, $data->first_name.' '. $data->last_name, 1, 0, 'C');
             $this->Cell(55, 10, $data->email, 1, 0, 'C');
             $this->Cell(35, 10, $data->mobile, 1, 0, 'C');
-            $this->Cell(60, 10, $data->program, 1, 0, 'C');
+            $this->Cell(30, 10, $data->program, 1, 0, 'C');
+            $this->Cell(60, 10, $data->degree, 1, 0, 'C');
             $this->Ln();
         }
     }
