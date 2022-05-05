@@ -57,7 +57,7 @@
 
 <div class="flex items-center justify-center pt-10">
    <div
-      class="shadow text-center shadow shadow-gray-300 w-1/2.5 rounded-lg p-16"
+      class="bg-white text-center shadow shadow-gray-300 w-1/2.5 rounded-lg p-16"
    >
       <img src="../images/program.png" alt="" class="mx-auto logo" />
       <br />

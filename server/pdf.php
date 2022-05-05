@@ -17,7 +17,7 @@ class PDF extends FPDF
         $this->Image('../images/dl-logo.png', 70, 8, 20);
           
         // GFG logo image
-        $this->Image('../images/dl-logo.png', 200, 8, 20);
+        $this->Image('../images/wmsu.png', 200, 8, 20);
           
            
         // Set font-family and font-size
@@ -59,7 +59,7 @@ class PDF extends FPDF
         $this->Cell(30,10, 'Normal Road, Baliwasan 7000 Zamboanga City Philippines', 0, 0, 'C');
 
         // Break line with given space
-        $this->Ln(30);
+        $this->Ln(20);
          
         // Move to the right
         // $this->Cell(5);
@@ -91,12 +91,13 @@ class PDF extends FPDF
 
     function headerTable(){
         $this->setFont('Arial', 'B', 8);
-        $this->Cell(30, 9, 'ID', 1, 0, 'C');
-        $this->Cell(67, 9, 'STUDENT NAME', 1, 0, 'C');
-        $this->Cell(55, 9, 'EMAIL', 1, 0, 'C');
-        $this->Cell(35, 9, 'CONTACT #', 1, 0, 'C');
-        $this->Cell(30, 9, 'COLLEGE', 1, 0, 'C');
-        $this->Cell(60, 9, 'MAJOR', 1, 0, 'C');
+        $this->Cell(30, 8, 'ID', 1, 0, 'C');
+        $this->Cell(60, 8, 'STUDENT NAME', 1, 0, 'C');
+        $this->Cell(55, 8, 'EMAIL', 1, 0, 'C');
+        $this->Cell(30, 8, 'CONTACT #', 1, 0, 'C');
+        $this->Cell(25, 8, 'COLLEGE', 1, 0, 'C');
+        $this->Cell(55, 8, 'MAJOR', 1, 0, 'C');
+        $this->Cell(23, 8, 'STATUS', 1, 0, 'C');
         $this->Ln();
 
     }
@@ -108,24 +109,25 @@ class PDF extends FPDF
         $program = $_POST['program'];
 
         if($program == "All"){
-            $sql = "select * from user_details INNER JOIN application ON user_details.user_id = application.user_id";
+            $sql = "select * from user_details INNER JOIN application ON user_details.user_id = application.user_id AND status != 'pending' AND status != 'declined'";
             $stmt = $db->query($sql);
         } else {
-            $sql = "select * from user_details INNER JOIN application ON user_details.user_id = application.user_id  WHERE user_details.program = '$program';";
+            $sql = "select * from user_details INNER JOIN application ON user_details.user_id = application.user_id  WHERE user_details.program = '$program' AND status != 'pending' AND status != 'declined';";
              $stmt = $db->query($sql);
         }
 
 
         $this->setFont('Arial', '', 8);
-        $sql = "select * from user_details";
+       
         $stmt = $db->query($sql);
         while($data = $stmt->fetch(PDO::FETCH_OBJ)){
-            $this->Cell(30, 10, $data->user_id, 1, 0, 'C');
-            $this->Cell(67, 10, $data->first_name.' '. $data->last_name, 1, 0, 'C');
-            $this->Cell(55, 10, $data->email, 1, 0, 'C');
-            $this->Cell(35, 10, $data->mobile, 1, 0, 'C');
-            $this->Cell(30, 10, $data->program, 1, 0, 'C');
-            $this->Cell(60, 10, $data->degree, 1, 0, 'C');
+            $this->Cell(30, 9, $data->user_id, 1, 0, 'C');
+            $this->Cell(60, 9, $data->first_name.' '. $data->last_name, 1, 0, 'C');
+            $this->Cell(55, 9, $data->email, 1, 0, 'C');
+            $this->Cell(30, 9, $data->mobile, 1, 0, 'C');
+            $this->Cell(25, 9, $data->program, 1, 0, 'C');
+            $this->Cell(55, 9, $data->major, 1, 0, 'C');
+            $this->Cell(23, 9, $data->status, 1, 0, 'C');
             $this->Ln();
         }
     }

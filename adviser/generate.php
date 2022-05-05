@@ -8,7 +8,7 @@ session_start();
 $program = $_SESSION['role'];
 
 
-$result = mysqli_query($con, "select * from user_details INNER JOIN application ON user_details.user_id = application.user_id  WHERE user_details.program = '$program' AND status = 'admission';");
+$result = mysqli_query($con, "select * from user_details INNER JOIN application ON user_details.user_id = application.user_id  WHERE user_details.program = '$program'");
 
 
 
@@ -37,22 +37,32 @@ $result = mysqli_query($con, "select * from user_details INNER JOIN application 
 </head>
 <body class="container mx-auto mt-10">
 
-          <a
+
+
+          <div class="flex">
+            <a
+            
+              href="./reports.php"
+              class="mt-6 mb-10 bg-sky-600 text-white px-8 py-2 rounded hover:bg-sky-700 hover:cursor-pointer"
+            >
+              <i class="mr-3 fa fa-chevron-left"></i>Back 
+            </a>
+
+
+           <form action="../server/pdf.php" method="POST" >
+              <input type="hidden" name="program" value="<?php echo $program; ?>">
+               <input
+                    type="submit"
+                    class="ml-3 mt-6 mb-10 bg-green-600 text-white px-8 py-2 rounded hover:bg-green-700 hover:cursor-pointer"
+                    value=" PDF"
+                  >
+                 
+         
+           </form>
+          </div>
           
-            href="./reports.php"
-            class="text-gray-600"
-          >
-           <i class="mr-3 fa fa-chevron-left"></i>Back 
-          </a>
-          
-           <button
-           onclick="window.print();"
-            type="submit"
-            class="float-right text-gray-600"
-          >
-            Print <i class="ml-1 fa fa-file"></i>
-          </button>
-     <table class="table-auto min-w-full  border divide-y divide-gray-200 mt-5">
+           
+     <table class="table-auto min-w-full  border divide-y divide-gray-200">
             <thead class="bg-blue py-0">
              
               <tr>
@@ -65,31 +75,31 @@ $result = mysqli_query($con, "select * from user_details INNER JOIN application 
 
                 <th
                   scope="col"
-                  class="px-6 py-3 text-left text-sm font-medium text-white uppercase tracking-wider"
+                  class="px-6 py-5 text-left text-sm font-medium text-white uppercase tracking-wider"
                 >
                   Email
                 </th>
 
                 <th
                   scope="col"
-                  class="px-6 py-3 text-left text-sm font-medium text-white uppercase tracking-wider"
+                  class="px-6 py-5 text-left text-sm font-medium text-white uppercase tracking-wider"
                 >
                   Contact
                 </th>
 
                 <th
                   scope="col"
-                  class="px-6 py-3 text-left text-sm font-medium text-white uppercase tracking-wider"
+                  class="px-6 py-5 text-left text-sm font-medium text-white uppercase tracking-wider"
                 >
                   Program
                 </th>
 
-                <!-- <th
+                <th
                   scope="col"
-                  class="px-6 py-3 text-left text-sm font-medium text-white uppercase tracking-wider"
+                  class="px-6 py-5 text-left text-sm font-medium text-white uppercase tracking-wider"
                 >
                   Status
-                </th> -->
+                </th>
                 <th class="px-4"></th>
               </tr>
 
@@ -121,18 +131,18 @@ $result = mysqli_query($con, "select * from user_details INNER JOIN application 
                                     Active
                                  </span>
                               </td> -->
-                <td class="px-5 py-3 whitespace-nowrap text-md text-gray-900">
+                <td class="px-5 py-5 whitespace-nowrap text-md text-gray-900">
                   <div class="text-sm text-gray-900">  <?php echo $row['email']; ?></div>
                 </td>
 
-                <td class="px-5 py-3 whitespace-nowrap text-md text-gray-900">
+                <td class="px-5 py-5 whitespace-nowrap text-md text-gray-900">
                   <div class="text-sm text-gray-900"><?php echo $row['mobile']; ?></div>
                 </td>
 
                 <td class="px-5 py-3 whitespace-nowrap">
                   <div class="text-sm text-gray-900">Masters in <?php echo $row['program']; ?></div>
                 </td>
-<!-- 
+
                 <td class="px-5 py-3 ">
                   <span
                     class="text-white text-xs font-bold mr-2 px-2.5 py-0.5 rounded <?php 
@@ -145,7 +155,7 @@ $result = mysqli_query($con, "select * from user_details INNER JOIN application 
                     }
                     ?>"><?php echo $row['status']; ?></span
                   >
-                </td> -->
+                </td>
 
               </tr>
               
@@ -160,5 +170,3 @@ $result = mysqli_query($con, "select * from user_details INNER JOIN application 
          
 </body>
 </html>
-
-

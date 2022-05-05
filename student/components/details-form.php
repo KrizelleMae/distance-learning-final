@@ -50,7 +50,7 @@
       </div>
    </div>
 
-   <div class="mx-auto mt-10 shadow p-16 bg-gray-50 rounded w-3/4">
+   <div class="mx-auto mt-10 shadow-lg p-16 bg-white rounded w-3/4">
       <div
          class="uppercase mb-16 text-2xl font-semibold text-gray-700 text-center"
       >

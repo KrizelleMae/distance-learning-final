@@ -33,7 +33,7 @@ include './auth.php';
         </div>
       </div>
 
-      <div class="shadow-lg p-10 w-1/2 bg-white rounded mt-10">
+      <div class="shadow-lg p-10 w-1/3 bg-white rounded mt-10">
         <form action="./generate_report.php" method="POST" class="">
           <!-- <div class="">
             <label class="block mb-2 text-sm font-medium text-gray-700"

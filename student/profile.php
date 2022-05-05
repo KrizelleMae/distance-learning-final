@@ -131,12 +131,16 @@ $user_id = $_SESSION['id'];
             >
               <span class="font-bold">Birthdate:</span>
               <!-- <div class="w-14"></div> -->
-              <span class=""><?php echo date("F j, Y", $row['birthdate']);?></span>
+              <span class=""><?php echo date_format(date_create($row['birthdate']),"F j, Y");?></span>
             </div>
 
             <!-- <div class="bg-gray-200 h-1 w-m-2xl mt-7 rounded-full"></div> -->
           </div>
 
+
+
+          <div class="mt-5"></div>
+          <hr>
           <div class="text-sm mt-10 text-gray-800">
             <div class="mb-3 space-x-1 items-center text-md">
               <span class="font-bold">College/ University Attended:</span>
@@ -199,7 +203,7 @@ $user_id = $_SESSION['id'];
                   <input type="tel" class="shadow-sm bg-gray-50 border
                   border-gray-300 text-gray-700 text-sm rounded-lg
                   focus:ring-blue-500 focus:border-blue-500 block w-full p-3"
-                  pattern="[0-9]{11}" placeholder="+639" name="new_mobile" value="<?php echo $row['mobile'];?>"
+                 placeholder="" name="new_mobile" value="<?php echo $row['mobile'];?>"
                   required />
                 </div>
 

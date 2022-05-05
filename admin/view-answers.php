@@ -81,12 +81,24 @@ while($row = mysqli_fetch_assoc($result)) {
               <div class="mb-6">
                 <span class="uppercase text-xs text-gray-400"
                   ><i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                  PROGRAM:</span
+                  DEGREE:</span
                 >
                 <br />
                 <span class="text-md font-medium text-gray-800"
                   >Masters in
                   <?php echo $row['program'] ; ?></span
+                >
+              </div>
+
+               <div class="mb-6">
+                <span class="uppercase text-xs text-gray-400"
+                  ><i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                  COURSE:</span
+                >
+                <br />
+                <span class="text-md font-medium text-gray-800"
+                  >Masters in
+                  <?php echo $row['major'] ; ?></span
                 >
               </div>
 
@@ -113,7 +125,19 @@ while($row = mysqli_fetch_assoc($result)) {
                     ><?php echo $row['gender'] ; ?></span
                   >
                 </div>
+
+                 <div class="mb-6">
+                    <span class="uppercase text-xs text-gray-400"
+                      ><i class="fa fa-calendar"></i> Birthdate:</span
+                    >
+                    <br />
+                    <span class="text-md font-medium text-gray-800"
+                      ><?php echo date_format(date_create($row['birthdate']),"F j, Y");?></span
+                    >
+                </div>
               </div>
+
+             
 
               <div class="mb-6">
                 <span class="uppercase text-xs text-gray-400"
@@ -131,7 +155,7 @@ while($row = mysqli_fetch_assoc($result)) {
                 >
                 <br />
                 <span class="text-md font-medium text-gray-800"
-                  ><?php echo $row['barangay']. ', ' . $row['city']. ', ' . $row['country'] ; ?></span
+                  ><?php echo $row['house'] . ", ". $row['street'] .",". $row['city'] .", ". $row['state'].", ". $row['country'] ." ". $row['zip'];?></span
                 >
               </div>
 

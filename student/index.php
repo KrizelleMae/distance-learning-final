@@ -28,6 +28,8 @@ $result = mysqli_query($con, $sql);
       <link rel="stylesheet" href="../css/navbar.css" />
       <link rel="stylesheet" href="./css/main.css" />
 
+         <?php include '../includes/links.php'; ?>
+
       <link
          rel="stylesheet"
          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
@@ -37,7 +39,7 @@ $result = mysqli_query($con, $sql);
          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
       />
    </head>
-   <body>
+   <body class="bg-gray-50">
       <?php
       
          if (mysqli_num_rows($result) >0) { while($row =

@@ -3,7 +3,7 @@
 <div class="main">
    <div class="">
       <div class="w-11/12 lg:w-2/4 mx-auto py-10">
-         <div class="bg-gray-200 h-1 flex items-center justify-between">
+         <div1class="bg-gray-100 h-1 flex items-center justify-between">
             <div class="w-1/3 bg-green-600 h-1 flex items-center">
                <div
                   class="bg-green-600 h-6 w-6 rounded-full shadow flex items-center justify-center"
@@ -58,11 +58,11 @@
             <div class="w-1/3 flex justify-end">
                <div class="bg-white h-6 w-6 rounded-full shadow"></div>
             </div>
-         </div>
+         </div1class=>
       </div>
 
       <div
-         class="w-auto mt-16 shadow p-16 mx-20 bg-gray-50 rounded flex justify-center"
+         class="w-auto mt-16 shadow p-16 mx-20 bg-white rounded flex justify-center"
       >
          <div class="">
             <div
@@ -81,7 +81,7 @@
                         id="text-area"
                         cols="80"
                         rows="3"
-                        class="rounded border border-gray-200 p-4 bg-gray-200"
+                        class="rounded border border-gray-100 p-4 bg-gray-100"
                         placeholder="Answer here"
                         required
                      ></textarea>
@@ -96,7 +96,7 @@
                         id="text-area"
                         cols="80"
                         rows="3"
-                        class="rounded border border-gray-200 p-4 bg-gray-200"
+                        class="rounded border border-gray-100 p-4 bg-gray-100"
                         placeholder="Answer here"
                         required
                      ></textarea>
@@ -112,7 +112,7 @@
                         id="text-area"
                         cols="80"
                         rows="3"
-                        class="rounded border border-gray-200 p-4 bg-gray-200"
+                        class="rounded border border-gray-100 p-4 bg-gray-100"
                         placeholder="Answer here"
                         required
                      ></textarea>
@@ -128,7 +128,7 @@
                         id="text-area"
                         cols="80"
                         rows="3"
-                        class="rounded border border-gray-200 p-4 bg-gray-200"
+                        class="rounded border border-gray-100 p-4 bg-gray-100"
                         placeholder="Answer here"
                         required
                      ></textarea>
@@ -143,7 +143,7 @@
                         id="text-area"
                         cols="80"
                         rows="3"
-                        class="rounded border border-gray-200 p-4 bg-gray-200"
+                        class="rounded border border-gray-100 p-4 bg-gray-100"
                         placeholder="Answer here"
                         required
                      ></textarea>

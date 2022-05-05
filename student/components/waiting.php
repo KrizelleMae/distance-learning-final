@@ -1,9 +1,9 @@
 <?php include './components/sidebar.php'; ?>
 
-<div class="main">
+<div class="main ">
   <div class="flex items-center md:mt-2 xl:mt-16 justify-center">
     <div
-      class="shadow text-center shadow shadow-gray-300 md:w-full xl:w-1/2 rounded-lg p-10"
+      class="bg-white text-center shadow shadow-gray-300 md:w-full xl:w-1/2 rounded-lg p-10"
     >
       <img src="../images/pending.png" alt="" class="h-64 mx-auto" />
       <br />

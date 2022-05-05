@@ -16,8 +16,8 @@
   <body class="bg-gray-200">
      <div class="m-10 pb-2 pt-4 pl-4">
         <div class="float-left">
-          <a
-            class="text-lg text-gray-700 hover:bg-gray-200 hover:px-5 hover:rounded hover:p-2 hover:no-underline hover:text-black hover:decoration-none"
+           <a
+            class="text-lg text-gray-700 hover:bg-gray-200 hover:px-5 hover:rounded hover:bg-red-200 hover:px-5  hover:py-2 hover:no-underline hover:text-black hover:decoration-none"
             href="./approved.php"
           >
             <i class="fa fa-chevron-left"></i> &nbsp; Back to Application

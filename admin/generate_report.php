@@ -6,11 +6,13 @@ include '../includes/db_connection.php';
 
 $program = $_POST['program'];
 
-if($program == "All"){
-  $result = mysqli_query($con, "select * from user_details INNER JOIN application ON user_details.user_id = application.user_id");
-} else {
-  $result = mysqli_query($con, "select * from user_details INNER JOIN application ON user_details.user_id = application.user_id  WHERE user_details.program = '$program';");
-}
+        if($program == "All"){
+            $sql = mysqli_query($con,"select * from user_details INNER JOIN application ON user_details.user_id = application.user_id AND status != 'pending' AND status != 'declined'");
+            
+        } else {
+            $sql = mysqli_query($con,"select * from user_details INNER JOIN application ON user_details.user_id = application.user_id  WHERE user_details.program = '$program' AND status != 'pending' AND status != 'declined';");
+           
+        }
 
 
 ?>
@@ -107,11 +109,11 @@ if($program == "All"){
             </thead>
             <tbody class="bg-white divide-y divide-gray-200">
             <?php 
-            if (mysqli_num_rows($result) == 0) {
+            if (mysqli_num_rows($sql) == 0) {
               echo "<tr><td class='p-5 bg-white'> No data available.</td></tr>";
             }
               else {
-                while($row = mysqli_fetch_assoc($result)) {
+                while($row = mysqli_fetch_assoc($sql)) {
             ?>
               
               <tr>

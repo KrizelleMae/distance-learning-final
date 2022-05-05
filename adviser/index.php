@@ -32,7 +32,7 @@ AND program = '$program';");
 
 $no_of_admission = $get_admission->fetch_row();
 
-$sql="SELECT * FROM application where program = '$program'"; 
+$sql="SELECT * FROM application where program = '$program' AND status != 'pending';"; 
 if($result=mysqli_query($con,$sql)){ 
    $rowcount=mysqli_num_rows($result); 
    } 

@@ -131,7 +131,7 @@ while($row = mysqli_fetch_assoc($result)) {
                 >
                 <br />
                 <span class="text-md font-medium text-gray-800"
-                  ><?php echo $row['barangay']. ', ' . $row['city']. ', ' . $row['country'] ; ?></span
+                  ><?php echo $row['house'] . ", ". $row['street'] .",". $row['city'] .", ". $row['state'].", ". $row['country'] ." ". $row['zip'];?></span
                 >
               </div>
 
